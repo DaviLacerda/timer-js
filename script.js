@@ -9,7 +9,7 @@ const btn_reset = document.getElementById('reset');
 
 // global variables
 var changeTimer = null;
-var [hr, min, sec] = [4, 59, 55]
+var [hr, min, sec] = [0, 0, 0]
 
 btn_start.addEventListener('click', () => {
     startTimer();
