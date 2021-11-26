@@ -18,6 +18,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #191919;
 }
 
 .container {
@@ -35,7 +36,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 100px;
-  background-color: red;
+  background-color: #531313;
+  border-radius: 8px;
   width: 80%;
   max-width: 720px;
   height: 50%;
@@ -52,7 +54,6 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 8px;
-  border: 1px solid black;
   font-size: 3em;
 }
 
@@ -62,7 +63,23 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border: 1px solid black;
   width: 80%;
+}
+
+.container .btn-container button {
+  padding: 8px;
+  width: 80px;
+  border-radius: 16px;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.container .btn-container button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
