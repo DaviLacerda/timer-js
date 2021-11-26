@@ -8,8 +8,8 @@ const btn_pause = document.getElementById('pause');
 const btn_reset = document.getElementById('reset');
 
 // global variables
-var changeTimer;
-var [hr, min, sec] = [0, 0, 0]
+var changeTimer = null;
+var [hr, min, sec] = [4, 59, 55]
 
 btn_start.addEventListener('click', () => {
     startTimer();
@@ -24,19 +24,23 @@ btn_reset.addEventListener('click', () => {
 })
 
 function startTimer() {
+    let [hrFormat, minFormat, secFormat] = ['00', '00', '00'] //for beautiful timer :)
     changeTimer = setInterval(() => {
-        sec += 1;
+        sec += 1
         if(sec === 60){
-            sec = 0;
-            min += 1;
+            sec = 0; //reset seconds value
+            min += 1; //plus in minutes
             if(min === 60){
-                min = 0;
-                hr += 1;
-                hours.innerHTML = hr;
+                min = 0; //reset minutes value
+                hr += 1; // plus in hours
+                hr < 10? (hrFormat = '0' + hr) : (hrFormat = parseInt(hr));
+                hours.innerHTML = hrFormat;
             }
-            minutes.innerHTML = min;
+            min < 10? (minFormat = '0' + min) : (minFormat = parseInt(min));
+            minutes.innerHTML = minFormat;
         }
-        seconds.innerHTML = sec;
+        sec < 10? (secFormat = '0' + sec) : (secFormat = parseInt(sec));
+        seconds.innerHTML = secFormat;
     }, 1000)
 }
 
@@ -46,8 +50,8 @@ function pauseTimer() {
 
 function resetTimer() {
     [hr, min, sec] = [0, 0, 0]
-    hours.innerHTML = hr;
-    minutes.innerHTML = min;
-    seconds.innerHTML = sec;
+    hours.innerHTML = '00';
+    minutes.innerHTML = '00';
+    seconds.innerHTML = '00';
     clearInterval(changeTimer)
 }
