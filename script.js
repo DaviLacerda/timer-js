@@ -14,18 +14,18 @@ const btn_container = document.getElementById('btn-container');
 
 // global variables
 var changeTimer = null;
-var lapOn = false;
-var lapContainerExist = false;
+
 var [hr, min, sec, hd] = [0, 0, 0, 0];
 var [hrFormat, minFormat, secFormat, hdFormat] = ['00', '00', '00', '00'];
+
+var lapOn = false;
+var lapContainerExist = false;
 var lapQuantity = 0;
 
 
 btn_start.addEventListener('click', () => {
-    startTimer();
-    if(lapOn === false){
-        freezeLapOn();
-        lapOn = true;
+    if(changeTimer === null){
+        startTimer();
     }
 })
 
@@ -35,10 +35,6 @@ btn_pause.addEventListener('click', () => {
 
 btn_reset.addEventListener('click', () => {
     resetTimer();
-    if(lapOn === true){
-        freezeLapOff();
-        lapOn = false;
-    }
 })
 
 function startTimer() {
@@ -66,10 +62,16 @@ function startTimer() {
         hundredth.innerHTML = hdFormat;
         
     }, 10)
+
+    if(lapOn === false){
+        freezeLapOn();
+        lapOn = true;
+    }
 }
 
 function pauseTimer() {
     clearInterval(changeTimer);
+    changeTimer = null;
 }
 
 function resetTimer() {
@@ -78,7 +80,15 @@ function resetTimer() {
     minutes.innerHTML = '00';
     seconds.innerHTML = '00';
     hundredth.innerHTML = '00';
+
     clearInterval(changeTimer)
+
+    changeTimer = null;
+
+    if(lapOn === true){
+        freezeLapOff();
+        lapOn = false;
+    }
 }
 
 function formatTime(timeToFormat, timeFormated) {
@@ -135,5 +145,5 @@ function freezeLapTime() {
 
     lap.innerHTML = `Lap ${lapQuantity}: ${hrFormat}:${minFormat}:${secFormat}.${hdFormat}`;
     lapQuantity++;
-    lap_container.appendChild(lap);
+    lap_container.prepend(lap);
 }
