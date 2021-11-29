@@ -20,7 +20,7 @@ var [hrFormat, minFormat, secFormat, hdFormat] = ['00', '00', '00', '00'];
 
 var lapOn = false;
 var lapContainerExist = false;
-var lapQuantity = 0;
+var lapQuantity = 1;
 
 
 btn_start.addEventListener('click', () => {
@@ -124,7 +124,7 @@ function freezeLapOff() {
 
     btn.remove();
     lap_container.remove();
-    lapQuantity = 0;
+    lapQuantity = 1;
     lapContainerExist = false;
 }
 
