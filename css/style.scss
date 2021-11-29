@@ -65,7 +65,7 @@ body{
             color: #000000;
             transition: .5s;
 
-            &:hover{
+            &:hover, &:active{
                 background-color: #0000006c;
                 color: #ffffff;
                 cursor: pointer;

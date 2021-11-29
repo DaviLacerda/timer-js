@@ -93,7 +93,7 @@ body {
   transition: .5s;
 }
 
-#container #btn-container button:hover {
+#container #btn-container button:hover, #container #btn-container button:active {
   background-color: #0000006c;
   color: #ffffff;
   cursor: pointer;
