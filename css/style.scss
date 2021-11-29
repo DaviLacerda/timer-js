@@ -35,6 +35,8 @@ body{
     min-height: 360px;
     max-height: 720px;
 
+    padding: 16px;
+
     .timer{
         display: flex;
         flex-direction: row;
@@ -65,7 +67,7 @@ body{
             color: #000000;
             transition: .5s;
 
-            &:hover, &:active{
+            &:hover{
                 background-color: #0000006c;
                 color: #ffffff;
                 cursor: pointer;
@@ -98,7 +100,7 @@ body{
         /* Chrome, Edge, and Safari */
         &::-webkit-scrollbar {
             width: 5px;
-            height: 100px;
+            height: 5px;
         }
 
         &::-webkit-scrollbar-track {

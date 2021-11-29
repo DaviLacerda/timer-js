@@ -47,6 +47,7 @@ body {
   height: 50%;
   min-height: 360px;
   max-height: 720px;
+  padding: 16px;
 }
 
 #container .timer {
@@ -93,7 +94,7 @@ body {
   transition: .5s;
 }
 
-#container #btn-container button:hover, #container #btn-container button:active {
+#container #btn-container button:hover {
   background-color: #0000006c;
   color: #ffffff;
   cursor: pointer;
@@ -122,7 +123,7 @@ body {
 
 #container #lap-container::-webkit-scrollbar {
   width: 5px;
-  height: 100px;
+  height: 5px;
 }
 
 #container #lap-container::-webkit-scrollbar-track {
