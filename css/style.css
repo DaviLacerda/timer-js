@@ -18,7 +18,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #db1e1e;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 
 #container {
@@ -128,7 +129,7 @@ body {
 }
 
 #container #lap-container::-webkit-scrollbar-track {
-  background: #db1e1e;
+  background: #4158D0;
 }
 
 #container #lap-container::-webkit-scrollbar-thumb {
