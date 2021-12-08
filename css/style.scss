@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
@@ -43,6 +45,8 @@ body{
         flex-direction: row;
         gap: 8px;
         font-size: 3em;
+        font-family: 'Chakra Petch', sans-serif;
+        width: 270px;
 
         #hundredth{
             font-size: 0.4em;
@@ -56,17 +60,22 @@ body{
         justify-content: center;
         gap: 16px;
         width: 80%;
+        
 
         button{
-            padding: 8px;
             width: 80px;
+            padding: 8px;
+                 
             background: rgba( 255, 255, 255, 0.2 );
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             backdrop-filter: blur( 20px );
             -webkit-backdrop-filter: blur( 20px );
             border: 1px solid #000;
             border-radius: 10px;
+
+            font-family: 'Readex Pro', sans-serif;
             color: #000000;
+
             transition: .5s;
 
             &:hover{
@@ -85,6 +94,9 @@ body{
         max-width: 300px;
 
         padding: 16px;
+
+        font-family: 'Readex Pro', sans-serif;
+        color: #000;
 
         background: rgba( 255, 255, 255, 0.2 );
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
